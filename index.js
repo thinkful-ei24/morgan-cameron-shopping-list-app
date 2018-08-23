@@ -25,5 +25,9 @@ $(function(){
     
     // Add our HTML to the DOM
     $('.shopping-list').append(generateListItemHTML(userInput));
+
+  });
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
+    $(this).parent().prev('.shopping-item').toggleClass('shopping-item__checked');
   });
 });
